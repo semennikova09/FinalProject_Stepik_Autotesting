@@ -1,6 +1,7 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
 
+
 class ProductPage(BasePage):
     def should_be_button_add_to_basket(self):
         assert self.is_element_present(*ProductPageLocators.BASKET), "Basket button is not presented"
@@ -24,5 +25,6 @@ class ProductPage(BasePage):
    
     def should_be_disappeared(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is present, but should be disappeared"
+        
    
    
